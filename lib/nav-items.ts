@@ -1,12 +1,19 @@
-import employees from "@/public/employee-icon.svg";
+import Employees from "@/public/employee-icon.svg";
 import Dashboard from "@/public/home-icon.svg";
-import solarSales from "@/public/solar-icon.svg";
-import Calender from "@/public/appointment.svg";
+import SolarSales from "@/public/solar-icon.svg";
+import Appointments from "@/public/appointment.svg";
 import Store from "@/public/store-icon.svg";
 import FileText from "@/public/document.svg";
 import Settings from "@/public/settings.svg";
+import React from "react";
 
-export const navItems = [
+export interface NavItem {
+  label: string;
+  href: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+export const navItems: NavItem[] = [
   {
     label: "Dashboard",
     href: "/",
@@ -15,17 +22,17 @@ export const navItems = [
   {
     label: "Employees",
     href: "/employees",
-    icon: employees,
+    icon: Employees,
   },
   {
     label: "Solar Sales",
     href: "/sales",
-    icon: solarSales,
+    icon: SolarSales,
   },
   {
     label: "Appointments",
     href: "/appointments",
-    icon: Calender,
+    icon: Appointments,
   },
   {
     label: "Store",

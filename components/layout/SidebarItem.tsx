@@ -3,17 +3,18 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import { FC, SVGProps } from "react";
 
 interface Props {
   label: string;
   href: string;
-  icon: string;
+  icon: string | React.ComponentType<SVGProps<SVGSVGElement>>;
 }
 
-export function SidebarItem({ label, href, icon }: Props) {
+export const SidebarItem: FC<Props> = ({ label, href, icon: Icon }) => {
   const pathname = usePathname();
   const active = pathname === href;
+  console.log("Rendering:", label, Icon);
 
   return (
     <Link
@@ -25,8 +26,8 @@ export function SidebarItem({ label, href, icon }: Props) {
           : "text-gray-300 hover:bg-white/5 hover:text-white"
       )}
     >
-      <Image src={icon} alt={`${label} icon`} width={20} height={20} />
+      <Icon className="w-5 h-5 shrink-0" />
       <span>{label}</span>
     </Link>
   );
-}
+};

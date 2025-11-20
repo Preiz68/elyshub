@@ -145,7 +145,7 @@ export function Sidebar() {
                 <div className="flex gap-3 items-center">
                   <div className="relative">
                     <Image
-                      src="/images/bottom-profile.png"
+                      src="/images/profile.png"
                       alt="User"
                       width={40}
                       height={40}
