@@ -3,7 +3,7 @@
 import "./globals.css";
 import { ReactNode } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
-import Topbar from "@/components/Topbar";
+import Topbar from "@/components/layout/Topbar";
 import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
