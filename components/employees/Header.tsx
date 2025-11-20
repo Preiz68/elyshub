@@ -3,7 +3,7 @@ import { CirclePlus, Download } from "lucide-react";
 
 export function EmployeesHeader() {
   return (
-    <div className="my-4 flex justify-between items-center">
+    <div className="flex justify-between items-center">
       <div className="flex flex-col gap-0.5">
         <h1 className="text-2xl font-semibold">Employees</h1>
         <p className="text-sm text-muted-foreground">

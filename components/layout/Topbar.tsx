@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { navItems } from "@/lib/nav-items";
 import { Search, Menu } from "lucide-react";
-import { useSidebar } from "@/store/useSidebar";
+import { useSidebar } from "@/store/useStore";
 
 import Notification from "@/public/topbar/notification.svg";
 import Chat from "@/public/topbar/message.svg";

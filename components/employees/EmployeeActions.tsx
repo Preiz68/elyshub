@@ -4,7 +4,7 @@ import { Search, Calendar, ListFilter, ChevronDown } from "lucide-react";
 
 export function EmployeesActions() {
   return (
-    <div className="flex items-center justify-between py-4">
+    <div className="flex items-center justify-between p-4">
       {/* Left side */}
       <div className="flex items-center gap-2">
         {/* Search */}

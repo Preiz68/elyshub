@@ -4,7 +4,7 @@ import Image from "next/image";
 import { navItems } from "@/lib/nav-items";
 import { SidebarItem } from "./SidebarItem";
 import { motion, AnimatePresence } from "framer-motion";
-import { useSidebar } from "@/store/useSidebar";
+import { useSidebar } from "@/store/useStore";
 import { useEffect, useState } from "react";
 
 export function Sidebar() {
