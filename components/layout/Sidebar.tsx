@@ -11,9 +11,6 @@ export function Sidebar() {
   const { open, close } = useSidebar();
 
   const [isTallEnough, setIsTallEnough] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen height
 
   useEffect(() => {
     const checkHeight = () => {
@@ -50,8 +47,8 @@ export function Sidebar() {
           exit={{ x: "-100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className="
-            fixed top-0 left-0
-            h-screen rounded-l-3xl
+            fixed top-0 left-0 bottom-0
+            rounded-l-3xl
             bg-[#101928]
             text-white
             flex flex-col
