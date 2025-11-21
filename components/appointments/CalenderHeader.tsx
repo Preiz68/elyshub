@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 const views = ["day", "week", "month", "year"] as const;
 
-export default function CalendarHeader() {
+export default function CalenderHeader() {
   const { currentDate, nextWeek, prevWeek, setView, view } = useCalendarStore();
   const date = new Date(currentDate);
 

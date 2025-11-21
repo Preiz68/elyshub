@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import AppointmentCard from "./AppointmentCard";
 import { Appointment } from "@/store/useStore";
 
-export default function CalendarDayColumn({
+export default function CalenderDayColumn({
   day,
   appointments,
   isLastTwo,

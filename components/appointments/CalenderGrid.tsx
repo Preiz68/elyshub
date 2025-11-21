@@ -6,7 +6,7 @@ import CalendarDayColumn from "./CalenderDayColumn";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 
-export default function CalendarGrid() {
+export default function CalenderGrid() {
   const { currentDate, appointments } = useCalendarStore();
   const days = weekRangeFrom(currentDate);
 
@@ -15,8 +15,8 @@ export default function CalendarGrid() {
       {/* Outer wrapper - responsive scroll behavior */}
       <div
         className="
-          overflow-x-auto           /* mobile & tablet scroll */
-          lg:overflow-x-hidden      /* desktop no scroll */
+          overflow-x-auto           
+          lg:overflow-x-hidden      
           w-full
         "
       >
