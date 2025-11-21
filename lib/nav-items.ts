@@ -10,7 +10,7 @@ import React from "react";
 export interface NavItem {
   label: string;
   href: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: string;
 }
 
 export const navItems: NavItem[] = [

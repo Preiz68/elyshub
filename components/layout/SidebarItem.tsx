@@ -5,17 +5,17 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { FC, SVGProps } from "react";
 import { useSidebar } from "@/store/useStore";
+import Image from "next/image";
 
 interface Props {
   label: string;
   href: string;
-  icon: string | React.ComponentType<SVGProps<SVGSVGElement>>;
+  icon: string;
 }
 
-export const SidebarItem: FC<Props> = ({ label, href, icon: Icon }) => {
+export const SidebarItem: FC<Props> = ({ label, href, icon }) => {
   const pathname = usePathname();
   const active = pathname === href;
-  const { close } = useSidebar();
 
   return (
     <Link
@@ -27,7 +27,7 @@ export const SidebarItem: FC<Props> = ({ label, href, icon: Icon }) => {
           : "text-gray-300 hover:bg-white/5 hover:text-white"
       )}
     >
-      <Icon className="w-5 h-5 shrink-0" />
+      <Image src={icon} alt={label} className="w-5 h-5 shrink-0" />
       <span>{label}</span>
     </Link>
   );

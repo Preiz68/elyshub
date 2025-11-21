@@ -6,16 +6,13 @@ import { navItems } from "@/lib/nav-items";
 import { Search, Menu } from "lucide-react";
 import { useSidebar } from "@/store/useStore";
 
-import Notification from "@/public/topbar/notification.svg";
-import Chat from "@/public/topbar/message.svg";
-import ArrowDown from "@/public/topbar/ArrowDown.svg";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 export default function Topbar({ currentPath }: { currentPath: string }) {
   const toggleSidebar = useSidebar((s) => s.toggle);
@@ -38,10 +35,14 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
             const isActive =
               (navItem.href === "/" && currentPath === "dashboard") ||
               navItem.href === `/${currentPath}`;
-            const Icon = navItem.icon;
 
             return isActive ? (
-              <Icon key={navItem.label} className="w-5 h-5" />
+              <Image
+                src={navItem.icon}
+                alt={navItem.label}
+                key={navItem.label}
+                className="w-5 h-5"
+              />
             ) : null;
           })}
         </div>
@@ -64,8 +65,20 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
 
         {/* ICONS */}
         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-          <Notification className="hidden lg:block w-6 h-6 text-gray-500" />
-          <Chat className="hidden lg:block w-6 h-6 text-gray-500" />
+          <Image
+            src="/topbar/notification.svg"
+            alt="notification"
+            width={20}
+            height={20}
+            className="hidden lg:block w-6 h-6 text-gray-500"
+          />
+          <Image
+            src="/topbar/message.svg"
+            alt="Chat"
+            width={20}
+            height={20}
+            className="hidden lg:block w-6 h-6 text-gray-500"
+          />
 
           <Avatar className="w-8 h-8">
             <AvatarImage src="/images/avatar1.png" />
@@ -74,17 +87,35 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
 
           <DropdownMenu>
             <DropdownMenuTrigger className="outline-none lg:hidden">
-              <ArrowDown className="w-5 h-5 text-gray-600" />
+              <Image
+                src="/topbar/ArrowDown.svg"
+                alt="Chat"
+                width={20}
+                height={20}
+                className="hidden lg:block w-6 h-6 text-gray-500"
+              />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end" className="w-44 space-y-1">
               <DropdownMenuItem className="flex items-center gap-2">
-                <Notification className="w-5 h-5" />
+                <Image
+                  src="/topbar/notification.svg"
+                  alt="notification"
+                  width={20}
+                  height={20}
+                  className="hidden lg:block w-6 h-6 text-gray-500"
+                />
                 Notifications
               </DropdownMenuItem>
 
               <DropdownMenuItem className="flex items-center gap-2">
-                <Chat className="w-5 h-5" />
+                <Image
+                  src="/topbar/message.svg"
+                  alt="Chat"
+                  width={20}
+                  height={20}
+                  className="hidden lg:block w-6 h-6 text-gray-500"
+                />
                 Messages
               </DropdownMenuItem>
             </DropdownMenuContent>
