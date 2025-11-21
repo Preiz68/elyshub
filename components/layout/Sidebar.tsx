@@ -24,7 +24,7 @@ export function Sidebar() {
   }, []);
 
   return (
-    <>
+    <div className="w-full h-full">
       {/* BACKDROP on mobile */}
       <AnimatePresence>
         {open && (
@@ -164,6 +164,6 @@ export function Sidebar() {
           </div>
         </motion.aside>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
