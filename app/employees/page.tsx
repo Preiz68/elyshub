@@ -6,7 +6,7 @@ export default function EmployeesPage() {
   return (
     <div className="w-full space-y-4">
       <EmployeesHeader />
-      <div className="border rounded-lg bg-white overflow-auto lg:overflow-hidden w-full">
+      <div className="border rounded-lg mb-4 bg-white overflow-auto lg:overflow-hidden w-full">
         <EmployeesActions />
         <EmployeesTable />
       </div>

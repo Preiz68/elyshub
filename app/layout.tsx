@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const path = usePathname().split("/")[1] || "dashboard";
   return (
     <html lang="en" className={`${inter.className} antialiased`}>
-      <body className="h-screen w-screen flex overflow-hidden bg-[#F8FAFC]">
+      <body className="h-screen w-screen flex bg-[#F8FAFC]">
         <Sidebar />
 
         <div className="flex-1 flex flex-col overflow-hidden rounded-3xl">

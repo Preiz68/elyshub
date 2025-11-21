@@ -27,7 +27,7 @@ export function Sidebar() {
   }, []);
 
   return (
-    <>
+    <div className="w-full h-full">
       {/* BACKDROP on mobile */}
       <AnimatePresence>
         {open && (
@@ -141,7 +141,7 @@ export function Sidebar() {
             )}
 
             {/* ─────────── PROFILE ─────────── */}
-            <div className="mx-4 pt-6 pb-7 border-t border-gray-800">
+            <div className="mx-4 mb-2 pt-6 pb-7 border-t border-gray-800">
               <div className="flex items-center justify-between">
                 <div className="flex gap-3 items-center">
                   <div className="relative">
@@ -167,6 +167,6 @@ export function Sidebar() {
           </div>
         </motion.aside>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
