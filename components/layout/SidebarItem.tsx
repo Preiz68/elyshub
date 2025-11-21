@@ -4,6 +4,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { FC, SVGProps } from "react";
+import { useSidebar } from "@/store/useStore";
 
 interface Props {
   label: string;
@@ -14,7 +15,7 @@ interface Props {
 export const SidebarItem: FC<Props> = ({ label, href, icon: Icon }) => {
   const pathname = usePathname();
   const active = pathname === href;
-  console.log("Rendering:", label, Icon);
+  const { close } = useSidebar();
 
   return (
     <Link

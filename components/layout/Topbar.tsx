@@ -68,7 +68,7 @@ export default function Topbar({ currentPath }: { currentPath: string }) {
           <Chat className="hidden lg:block w-6 h-6 text-gray-500" />
 
           <Avatar className="w-8 h-8">
-            <AvatarImage src="/images/profile.png" />
+            <AvatarImage src="/images/avatar1.png" />
             <AvatarFallback>AE</AvatarFallback>
           </Avatar>
 
